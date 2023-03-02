@@ -2,11 +2,11 @@
   <div id="app">
     <div class="column is-half is-offset-one-quarter">
 
-      <h3 class="is-size-4">Pokedex</h3>
-      <input class="input is-rounded" type="text" placeholder="Buscar Pokemon pelo nome" v-model="busca">
-      <button class="button is-fullwidth is-rounded is-primary" id="isButton" @click="buscar">Buscar</button>
-      <div v-for="(poke,index) in filteredPokemons" :key="poke.url">
-        <Pokemon :name="poke.name" :url="poke.url" :num="index + 1"/>
+      <h3 class="is-size-1" id="isText">POKÉDEX</h3>
+      <input class="input is-rounded is-primary" type="text" placeholder="Buscar Pokemon pelo nome" v-model="busca">
+      <button class="button is-fullwidth is-primary" id="isButton" @click="buscar">Buscar</button>
+      <div v-for="(poke) in filteredPokemons" :key="poke.url" id="isDiv">
+        <Pokemon :name="poke.name" :url="poke.url"/>
       </div>
     </div>
   </div>
@@ -60,17 +60,22 @@ export default {
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #0e3d59;
 }
 
 #isButton {
   margin-top: 2%;
   margin-bottom: 4%;
 }
+
+#isText {
+  margin-bottom: 2%;
+}
+
 </style>

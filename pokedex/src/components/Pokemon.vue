@@ -1,14 +1,14 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div id="pokemon">
-        <div class="card">
-            <div class="card-image">
+        <div class="card" id="fundoColor">
+            <div class="card-image" >
                 <figure>
                 <img :src="currentImg" alt="Placeholder image">
                 </figure>
             </div>
-            <div class="card-content">
-                <div class="media">
+            <div class="card-content" id="fundoColor-1">
+                <div class="media" id="text">
                     <div class="media-content">
                         <p class="title is-4">{{num}} {{name | upper}}</p>
                         <p class="subtitle is-6">{{ pokemon.type }}</p>
@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="content">
-                    <button class="button is-fullwidth" @click="mudarSprite">Mudar Sprite</button>
+                    <button class="button is-fullwidth is-primary" @click="mudarSprite">Mudar Sprite</button>
                 </div>
             </div>
         </div>
@@ -73,7 +73,13 @@ export default {
 </script>
 
 <style>
+
+    #fundoColor{
+        background-color: #da5931;
+    }
+
     #pokemon {
         margin-top: 2%;
     }
+    
 </style>
