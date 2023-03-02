@@ -32,7 +32,7 @@ export default {
             this.pokemon.type = res.data.types[0].type.name;
             this.pokemon.front = res.data.sprites.front_default;
             this.pokemon.back = res.data.sprites.back_default;
-
+            this.currentImg = this.pokemon.front;
             console.log(this.pokemon);
         })
     },
